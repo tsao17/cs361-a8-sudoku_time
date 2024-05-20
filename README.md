@@ -22,7 +22,7 @@ def example_write():
           file1.writelines(str(time2))
           file1.truncate()
      file1.close()
-'''
+```
 
 Receive Data:
 1. Once the lap times are written on sudoku_times.txt, read the data from the fastest_alg.txt page.
@@ -38,7 +38,7 @@ def example_read():
           print("The fastest alg was:" + line1)
           print("It was faster by: " + line2)
      file1.close()
-'''
+```
 
 Troubleshooting:
 If data is not getting received please lookout for these things:
