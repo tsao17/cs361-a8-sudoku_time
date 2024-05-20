@@ -13,26 +13,28 @@ Request Data:
 
   Example can be found in sample_write_times.py
   code is listed below:
-  
-with open('./sudoku_times.txt', 'r+') as file1:
-     file1.seek(0)
-     file1.writelines(str(time1) + '\n')
-     file1.writelines(str(time2))
-     file1.truncate()
-file1.close()
+
+def example_write():
+     with open('./sudoku_times.txt', 'r+') as file1:
+          file1.seek(0)
+          file1.writelines(str(time1) + '\n')
+          file1.writelines(str(time2))
+          file1.truncate()
+     file1.close()
 
 Receive Data:
 1. Once the lap times are written on sudoku_times.txt, read the data from the fastest_alg.txt page.
 
-  An example of how to read the textfile is shown in sample_read_alg.py.
-  
-with open('./fastest_alg.txt', 'r+') as file1:
-     line1 = file1.readline()
-     line2 = file1.readline()
-     
-     print("The fastest alg was:" + line1)
-     print("It was faster by: " + line2)
-file1.close()
+  An example of how to read the textfile is shown in sample_read_alg.py and below:
+
+def example_read():
+     with open('./fastest_alg.txt', 'r+') as file1:
+          line1 = file1.readline()
+          line2 = file1.readline()
+          
+          print("The fastest alg was:" + line1)
+          print("It was faster by: " + line2)
+     file1.close()
 
 Troubleshooting:
 If data is not getting received please lookout for these things:
